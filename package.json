@@ -1,6 +1,6 @@
 {
   "name": "insert-text-2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cross-browser insertText library",
   "author": "Fritz Lin <uxfritz@163.com>",
   "main": "lib/insert-text-2.js",
