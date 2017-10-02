@@ -1,22 +1,32 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <div class="editor" ref="editable" contenteditable>...</div>
+    <button @click="insertToEditable">Insert</button>
+    <hr>
+    <textarea class="editor" ref="textarea">...</textarea>
+    <button @click="insertToTextarea">Insert</button>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import insertText from '@/insert'
 
 export default {
   name: 'app',
-  components: {
-    Hello
+  methods: {
+    insertToEditable () {
+      this.$refs.editable.focus()
+      insertText(Math.random() + ' ')
+    },
+    insertToTextarea () {
+      this.$refs.textarea.focus()
+      insertText(Math.random() + ' ')
+    }
   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,5 +34,25 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.editor {
+  display: inline-block; /* align to center */
+  box-sizing: border-box;
+  width: 400px;
+  max-width: 100%;
+  height: 80px;
+  overflow: auto;
+  white-space: pre-wrap;
+  border: solid 1px rgba(0,0,0,.3);
+  padding: .4em;
+}
+
+button {
+  /* emable button style in mobile emulator */
+}
+
+hr {
+  margin: 30px 0;
 }
 </style>

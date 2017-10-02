@@ -1,21 +1,19 @@
-# range-insert
+# insert-text-2
 
-> A Vue.js project
+> Cross-browser insertText library
 
-## Build Setup
+```js
+import insert from 'insert-text-2'
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+editor.focus()
+insert('Hello world!')
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Todo
+
+- Editor scroll down on insert
+- Editor save/restore on focus/blur
+
+### Motivation
+
+https://github.com/fritx/vue-at/issues/22
