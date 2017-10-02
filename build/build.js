@@ -8,7 +8,10 @@ var path = require('path')
 var chalk = require('chalk')
 var webpack = require('webpack')
 var config = require('../config')
-var webpackConfig = require('./webpack.prod.conf')
+
+var webpackConfig = process.env.TARGET === 'lib'
+  ? require('./webpack.lib.conf')
+  : require('./webpack.prod.conf')
 
 var spinner = ora('building for production...')
 spinner.start()
