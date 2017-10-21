@@ -4,6 +4,7 @@
   "description": "Cross-browser insertText library",
   "author": "Fritz Lin <uxfritz@163.com>",
   "main": "lib/insert-text-2.js",
+  "repository": "https://github.com/fritx/insert-text-2",
   "scripts": {
     "demo:dev": "node build/dev-server.js",
     "demo:build": "node build/build.js",
