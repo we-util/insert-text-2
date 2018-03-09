@@ -2,7 +2,7 @@
 
 export default function insert (text) {
   let ae = document.activeElement
-  if (ae.tagName === 'TEXTAREA') {
+  if (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA') {
     return insertToTextarea(text, ae)
   } else {
     return insertToEditable(text)

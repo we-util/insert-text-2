@@ -3,6 +3,9 @@
     <div class="editor" ref="editable" contenteditable>...</div>
     <button @click="insertToEditable">Insert</button>
     <hr>
+    <input type="text" class="editor" ref="input" value="...">
+    <button @click="insertToInput">Insert</button>
+    <hr>
     <textarea class="editor" ref="textarea">...</textarea>
     <button @click="insertToTextarea">Insert</button>
   </div>
@@ -16,6 +19,10 @@ export default {
   methods: {
     insertToEditable () {
       this.$refs.editable.focus()
+      insertText(Math.random() + ' ')
+    },
+    insertToInput () {
+      this.$refs.input.focus()
       insertText(Math.random() + ' ')
     },
     insertToTextarea () {
